@@ -3,11 +3,10 @@ let b;
 let anotherBall;
 
 function setup() {
-  createCanvas(800, 400);
-  b = new Ball(0, 100,"red"); //make a new ball from the Ball class and call it b.
-  anotherBall = new Ball(200,20,"green");
+  createCanvas(800, 200);
+  b = new Ball(0, 150,"blue"); //make a new ball from the Ball class and call it b.
+  anotherBall = new Ball(600,120,"orange");
 }
-
 
 function draw(){
 	background(220);
@@ -27,6 +26,7 @@ class Ball {
     		this.y = y;
         this.color= color;
 	}
+
 	drawBall(){  // draw a ball on the screen at x,y
     		stroke(0);
     		fill(this.color);
