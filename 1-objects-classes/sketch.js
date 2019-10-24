@@ -1,11 +1,18 @@
-//create a variable to hold one ball
+
 let b;
-let anotherBall;
+let anotherBall
+let squish
+let anotherSquish
+let funinthesun;
 
 function setup() {
-  createCanvas(800, 200);
-  b = new Ball(0, 150,"blue"); //make a new ball from the Ball class and call it b.
+  createCanvas(700, 230);
+  b = new Ball(10,124,"green"); //make a new ball from the Ball class and call it b.
   anotherBall = new Ball(600,120,"orange");
+  squish = new Ball(15, 140,"blue");
+  anotherSquish = new Ball(20, 165, "red");
+  funinthesun= new Ball(34,180,"purple");
+
 }
 
 function draw(){
@@ -14,9 +21,13 @@ function draw(){
     b.moveBall(); //move the ball called b (go look in the Ball class for the moveBall function)
     anotherBall.drawBall();
     anotherBall.moveBall();
-
+    squish.drawBall();
+    squish.moveBall();
+    anotherSquish.drawBall();
+    anotherSquish.moveBall();
+    funinthesun.drawBall();
+    funinthesun.moveBall();
 }
-
 
 //ball class from which to create new balls with similar properties.
 class Ball {
@@ -25,6 +36,7 @@ class Ball {
 		    this.x = x;
     		this.y = y;
         this.color= color;
+
 	}
 
 	drawBall(){  // draw a ball on the screen at x,y
@@ -33,7 +45,7 @@ class Ball {
 		    ellipse(this.x,this.y,10,10);
 	}
 	moveBall(){ //update the location of the ball, so it moves across the screen
-		this.x = this.x+2;
-		this.y = this.y+.5;
+        this.x = this.x+3;
+if  funinthesun then this.x = this.x+10;
 	}
 }
