@@ -7,8 +7,8 @@ let me;
 let mySound;
 
 function preload() {
-  soundFormats('mp3', 'ogg');
-  mySound = loadSound('boing1.mp3');
+  soundFormats('mp3', 'ogg','wav');
+  mySound = loadSound('pepper.wav');
 }
 
 function setup() {
